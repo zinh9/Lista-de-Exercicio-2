@@ -1,14 +1,16 @@
-print("Este programa verifica qual é o maior numero digitado")
+print("Este programa verifica se você foi aprovado, reprovado, ou recuperação com sua média de notas")
 
-numero1 = int(input("Digite o primeiro numero: "))
-numero2 = int(input("Digite o segundo numero: "))
-numero3 = int(input("Digite o terceiro numero: "))
+nome_aluno = input("Digite seu nome: ")
+nota_1 = float(input("Digite sua primeira nota: "))
+nota_2 = float(input("Digite sua segunda nota: "))
 
-if numero1 > numero2 and numero1 > numero3:
-    print("O numero " +str(numero1) +" é o maior")
+media = nota_1 + nota_2 / 2
 
-elif numero2 > numero1 and numero2 > numero3:
-    print("O numero " +str(numero2) +" é o maior")
-    
-else:
-    print("O numero " +str(numero3) +" é o maior")
+if media == 0 or media < 5:
+    print("Você esta reprovado com média: " +str(media) +" pontos")
+
+elif media == 5 or media < 7:
+    print("Você esta de recuperação com média: " +str(media) +" pontos")
+
+elif media == 7 or media <= 10:
+    print("Você esta aprovado com média: " +str(media) +" pontos")
